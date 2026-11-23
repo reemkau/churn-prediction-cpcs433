@@ -9,10 +9,12 @@ Predicting customer churn on the Iranian Churn dataset (UCI Machine Learning Rep
 
 | File | What it does |
 | --- | --- |
-| `01_data_preparation.ipynb` | Cleans the data, selects the ten features, and makes the 70/15/15 split |
-| `02_logistic_regression.ipynb` | Trains, tunes and evaluates Logistic Regression |
-| `03_random_forest.ipynb` | Trains, tunes and evaluates Random Forest |
-| `04_comparison.ipynb` | Compares both models: metrics, curves, error analysis and interpretation |
+| `notebooks/01_data_preparation.ipynb` | Cleans the data, selects the ten features, and makes the 70/15/15 split |
+| `notebooks/02_logistic_regression.ipynb` | Trains, tunes and evaluates Logistic Regression |
+| `notebooks/03_random_forest.ipynb` | Trains, tunes and evaluates Random Forest |
+| `notebooks/04_comparison.ipynb` | Compares both models: metrics, curves, error analysis and interpretation |
+| `data/Customer Churn.csv` | The raw dataset, unchanged |
+| `requirements.txt` | Library versions used in Google Colab |
 
 ## Dataset
 
@@ -22,7 +24,7 @@ Iranian Churn Dataset, UCI Machine Learning Repository (CC BY 4.0): https://arch
 
 The notebooks run on **Google Colab** and read and save their files in Google Drive. No installation is needed: all the libraries are already available in Colab.
 
-1. Download the dataset, unzip it, and keep the file `Customer Churn.csv` (the name must match exactly).
+1. Download the dataset, unzip it, and keep the file `Customer Churn.csv` (the name must match exactly). The same file is also included in the `data/` folder of this repository.
 2. In Google Drive, create this folder structure inside **My Drive** and upload the CSV file:
    ```
    My Drive/
@@ -30,8 +32,8 @@ The notebooks run on **Google Colab** and read and save their files in Google Dr
        └── data/
            └── Customer Churn.csv
    ```
-3. Open `01_data_preparation.ipynb` in Google Colab (**File → Upload notebook**) and choose **Runtime → Run all**. Allow Colab to access Google Drive when asked.
-4. Repeat for the other notebooks **in order: 01 → 02 → 03 → 04**. Each notebook reads the files saved by the one before it.
+3. Open `notebooks/01_data_preparation.ipynb` in Google Colab (**File → Upload notebook**) and choose **Runtime → Run all**. Allow Colab to access Google Drive when asked.
+4. Repeat for the other notebooks **in order: 01 → 02 → 03 → 04**. Notebooks 02 and 03 read the split saved by Notebook 01, and Notebook 04 reads the results saved by 02 and 03.
 
 The notebooks create the rest automatically:
 
